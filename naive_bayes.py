@@ -3,7 +3,7 @@
 # FILENAME: naive_bayes.py
 # SPECIFICATION: Train a naive bayes model on weather data and test with a given test data. Print data entries with more than 0.75 confidence.
 # FOR: CS 4210- Assignment #2
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 6 hours
 #-----------------------------------------------------------*/
 
 #IMPORTANT NOTE: DO NOT USE ANY ADVANCED PYTHON LIBRARY TO COMPLETE THIS CODE SUCH AS numpy OR pandas. You have to work here only with standard vectors and arrays
@@ -15,7 +15,7 @@ import csv
 outlook_values = {"Sunny": 1, "Overcast": 2, "Rain": 3}
 temperature_values = {"Hot": 1, "Mild" : 2, "Cool": 3}
 humidity_values = {"High" : 1, "Normal": 2}
-wind_values = {"Weak": 1, "Strong": 1}
+wind_values = {"Weak": 1, "Strong": 2}
 play_tennis_values = {"Yes": 1, "No": 2}
 
 
@@ -108,6 +108,6 @@ for i,entry in enumerate(data_test):
 
     if no_confidence >= 0.75:
         print(entry[0].ljust(15) + entry[1].ljust(15) + entry[2].ljust(15) + entry[3].ljust(15) +
-              entry[4].ljust(15) + "No".ljust(15) + str(yes_confidence).ljust(15))
+              entry[4].ljust(15) + "No".ljust(15) + str(no_confidence).ljust(15))
 
 
